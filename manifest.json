@@ -13,6 +13,13 @@
       "scripts": ["popup.js"],
       "persistent": false
   },
+  "content_scripts": [
+      {
+        "matches": ["https://www.udemy.com/*", "https://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+  ],
   "permissions": [
     "activeTab",
     "storage"
