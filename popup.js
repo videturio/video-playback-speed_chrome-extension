@@ -18,7 +18,6 @@ function getSavedPlaybackSpeed() {
 
 function savePlaybackSpeed(speed) {
   chrome.storage.sync.set({'ps': speed}, function() {
-      console.log('Settings saved');
   });
 }
 
@@ -30,6 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
   playbackSpeed.addEventListener('change', () => {
     changePlaybackSpeed(playbackSpeed.value);
     savePlaybackSpeed(playbackSpeed.value);
-    console.log('Saved');
   });
 });
