@@ -21,13 +21,13 @@ function savePlaybackSpeed(speed) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   var playbackSpeed = document.getElementById('playbackSpeed');
 
   getSavedPlaybackSpeed();
 
-  playbackSpeed.addEventListener('change', () => {
-    changePlaybackSpeed(playbackSpeed.value);
-    savePlaybackSpeed(playbackSpeed.value);
-  });
+  playbackSpeed.addEventListener('input', function(event) {
+    changePlaybackSpeed(event.target.value);
+    savePlaybackSpeed(event.target.value);
+  }, false);
 });
