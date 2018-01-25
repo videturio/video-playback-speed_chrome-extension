@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #container input {
+          margin-left: 8px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <h1>Video Playback Speed</h1>
+    <div id="container">
+      <label for="playbackSpeed">Playback speed: </label>
+      <input type="text" name="playbackSpeed" id="playbackSpeed" placeholder="3.0" value=''>
+    </div>
+  </body>
+</html>
